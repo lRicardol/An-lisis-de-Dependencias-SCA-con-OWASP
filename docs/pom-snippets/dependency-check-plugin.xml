@@ -1,0 +1,20 @@
+<!-- Va dentro de <build><plugins> del pom.xml (NO dentro de <profiles>) -->
+<plugin>
+  <groupId>org.owasp</groupId>
+  <artifactId>dependency-check-maven</artifactId>
+  <version>13.0.0</version>
+  <configuration>
+    <!-- Nombre de la variable de entorno con la key (no la key) -->
+    <nvdApiKeyEnvironmentVariable>NVD_API_KEY</nvdApiKeyEnvironmentVariable>
+    <!-- Base de datos fuera de ~/.m2 para cachearla por separado -->
+    <dataDirectory>${user.home}/.dependency-check-data</dataDirectory>
+    <formats>
+      <format>HTML</format>
+      <format>SARIF</format>
+    </formats>
+    <!-- Falla con cualquier vulnerabilidad High o Critical -->
+    <failBuildOnCVSS>7</failBuildOnCVSS>
+    <!-- OSS Index exige cuenta en Sonatype; se desactiva -->
+    <ossIndexAnalyzerEnabled>false</ossIndexAnalyzerEnabled>
+  </configuration>
+</plugin>

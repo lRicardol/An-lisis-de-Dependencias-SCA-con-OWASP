@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suppressions xmlns="https://jeremylong.github.io/DependencyCheck/dependency-suppression.1.4.xsd">
+
+  <!--
+    Archivo de supresiones de OWASP Dependency-Check.
+    Hoy NO suprime nada: las supresiones activas se agregan en la sección 6 del laboratorio.
+
+    Plantilla (descomenta, completa y revisa en un pull request):
+
+    Motivo: MOTIVO_DE_LA_SUPRESION
+    Evidencia: EVIDENCIA_REVISADA
+    Revisado por: TU_USUARIO_GITHUB
+    Fecha de revisión: FECHA_REVISION
+
+    <suppress until="FECHA_VENCIMIENTO">
+      <notes><![CDATA[
+        MOTIVO_DE_LA_SUPRESION
+      ]]></notes>
+      <packageUrl regex="true">^pkg:maven/GRUPO_ESCAPADO/ARTEFACTO@.*$</packageUrl>
+      <vulnerabilityName>CVE_A_SUPRIMIR</vulnerabilityName>
+    </suppress>
+
+    Buenas prácticas: una supresión por CVE y dependencia, motivo y evidencia
+    en el comentario, fecha de vencimiento (until, formato AAAA-MM-DDZ) y
+    revisión en pull request.
+  -->
+
+</suppressions>

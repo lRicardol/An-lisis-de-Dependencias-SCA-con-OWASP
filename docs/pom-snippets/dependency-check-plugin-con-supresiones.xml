@@ -1,0 +1,19 @@
+<!-- Versión final del plugin (sección 6): agrega suppressionFiles -->
+<plugin>
+  <groupId>org.owasp</groupId>
+  <artifactId>dependency-check-maven</artifactId>
+  <version>13.0.0</version>
+  <configuration>
+    <nvdApiKeyEnvironmentVariable>NVD_API_KEY</nvdApiKeyEnvironmentVariable>
+    <dataDirectory>${user.home}/.dependency-check-data</dataDirectory>
+    <formats>
+      <format>HTML</format>
+      <format>SARIF</format>
+    </formats>
+    <failBuildOnCVSS>7</failBuildOnCVSS>
+    <ossIndexAnalyzerEnabled>false</ossIndexAnalyzerEnabled>
+    <suppressionFiles>
+      <suppressionFile>${project.basedir}/dependency-check-suppression.xml</suppressionFile>
+    </suppressionFiles>
+  </configuration>
+</plugin>
