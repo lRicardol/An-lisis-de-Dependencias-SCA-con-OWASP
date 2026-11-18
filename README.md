@@ -1,3 +1,5 @@
+> **Nota:** Este paquete es un complemento: el workflow se ejecuta en el fork de spring-petclinic, no en este repo.
+
 # Laboratorio SCA: OWASP Dependency-Check sobre Spring PetClinic
 
 Este paquete es un **complemento** para tu fork público de `spring-petclinic` (el del laboratorio de
